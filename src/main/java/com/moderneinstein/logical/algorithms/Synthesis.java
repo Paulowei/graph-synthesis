@@ -12,7 +12,6 @@ import java.util.Set ;
 
 
 public class Synthesis {
- 
     
     public static Map<Integer,List<Integer>> insert(List<int[]> listed){
         int height = listed.size() ; 
@@ -37,7 +36,8 @@ public class Synthesis {
                 edges.add(lanes) ;  
             }
         }  
-        List<List<int[]>> derived = Permutations.permute(edges) ; 
+        List<List<int[]>> derived = Permutations.permute(edges) ;   
+      //  System.out.println(derived.toString()) ; 
         Iterator<List<int[]>> dynamics =  derived.iterator() ; 
         while (dynamics.hasNext()){
             List<int[]> listed = dynamics.next() ;
